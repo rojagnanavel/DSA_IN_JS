@@ -36,9 +36,9 @@
 
 // In string-based problems, GCD is applied to string lengths to determine the largest repeating base pattern shared by both strings
 // a = 12, b = 18
-// GCD(a, b)
-// 18 % 12 = 6
-// 12 % 6  = 0
+// GCD(a, b) = b%a
+// 18 % 12 =  GCD(6, 12)
+// 12 % 6  = 0 GCD(6, 0)
 // GCD = 6
 
 var gcdOfStrings = function (str1, str2) {
@@ -49,7 +49,6 @@ var gcdOfStrings = function (str1, str2) {
   const gcdLength = gcd(str1.length, str2.length);
   return str1.slice(0, gcdLength);
 };
-
 console.log(gcdOfStrings("ABCABC", "ABC"));
 console.log(gcdOfStrings("ABABAB", "ABAB"));
 console.log(gcdOfStrings("LEET", "CODE"));
